@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400..800&display=swap");
+
+:root {
+  --Text-Font: "Syne", sans-serif;
+  --Heading-Font: "Bebas Neue", sans-serif;
+  --Signature-Font: "Signature";
+}
+
+@font-face {
+  font-family: "Signature";
+  src: url("./MainResources/ExtraResources/Signature.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #fbfbfb;
+  transition: font-family 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+  scroll-behavior: smooth;
+  letter-spacing: 1px;
+  font-family: var(var(--Text-Font));
+}
+
+P,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3d3b40;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.Download-app-Section,
+.team-social {
+  border-top: 1px solid black;
+  border-width: 0 10% 0 10%;
+  margin-top: 2rem;
+  border-image: linear-gradient(to right, transparent, black, transparent) 1 1;
+}
+
+.team-card:hover  {
+  transform: rotate(2deg);
+}
+
+.team-card-img img:hover,
+.why-choose-video video:hover,
+.web-image img:hover {
+  transform: scale(1.1);
+}
+
+.about-section, 
+.services-main {
+  max-width: 90%;
+}
+
+.about-right {
+  width: 40%;
+}
+
+@keyframes rotate-circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle-line img {
+  width: 150px;
+  animation: rotate-circle 5s linear infinite;
+}
+
+.who-marquee h2 {
+  font-family: var(--Signature-Font);
+}
+
+.team-section p,
+.team-section h2 {
+  color: #fbfbfb;
+}
+
+@media (max-width: 1000px) {
+  .home-page-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .homecare-img-container img {
+    margin-top: 0.5rem;
+  }
+
+  .about-help-text {
+    text-align: center;
+  }
+
+  .why-choose-us-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-right {
+    width: 100%;
+    margin-top: 2rem;
+  }
+ 
+  .services-main {
+    max-width: 1250px;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .home-right-side {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .download-app-hms {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards-container {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .why-choose-video {
+    max-width: 330px;
+    max-height: 400px;
+    margin-top: -1.5rem;
+  }
+
+  .why-choose-video video {
+    height: 100%;
+  }
+
+   .homecare-bottom-text {
+    margin-top: -3rem;
+   }
+
+   .services-card {
+    max-width: 200px;
+   }
+}
+
+.testimonial-img {
+  width: 280px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.testimonial-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.work {
+  max-width: 350px;
+}
+
+@media (max-width: 600px) {
+  .testimonial-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  } 
+
+  .testimonial-img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+   
+  .about-section{
+    max-width: 1250px;
+    width: 100%;
+  }
+
+  .work {
+    max-width:  100%;
+  }
+}
+
+
+
