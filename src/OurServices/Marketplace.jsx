@@ -253,7 +253,7 @@ function Marketplace() {
       </div>
 
       <Link
-        to="https://swasthfuture.com/"
+        to="/coming-soon"
         style={{
           color: "#4B4D40",
           border: "2px solid #4b4d40",

@@ -20,6 +20,8 @@ import HMS from "./HMS";
 import { GiDoctorFace } from "react-icons/gi";
 import { SiCoinmarketcap } from "react-icons/si";
 import TabsImg from "../MainResources/ServiceResources/Tab.svg";
+import QuickAccessSvg from "../MainResources/ExtraResources/QuickAccess.svg";
+import OurServiceSvg from "../MainResources/ExtraResources/OurService.svg";
 
 const servicesData = [
   {
@@ -28,7 +30,7 @@ const servicesData = [
     description:
       "Get expert nursing and homecare for recovery, elderly care, and chronic illness management. Certified caregivers ensure personalized support at home.",
     buttonText: "Explore HomeCare",
-    cardlink: "/homecare", // Link for this service
+    cardlink: "/coming-soon", // Link for this service
     id: 1,
   },
   {
@@ -37,7 +39,7 @@ const servicesData = [
     description:
       "Connect with top doctors from anywhere via secure video calls. Get expert medical advice, prescriptions, and follow-ups without the need for in-person visits.",
     buttonText: "Start Consultation",
-    cardlink: "https://swasthfuture.com/get-instant-consultation/", // Link for this service
+    cardlink: "/coming-soon", // Link for this service
     id: 2,
   },
   {
@@ -46,7 +48,7 @@ const servicesData = [
     description:
       "Schedule diagnostic tests from trusted labs with doorstep sample collection. Get accurate reports online and consult doctors instantly for analysis and further treatment.",
     buttonText: "Book Lab Test",
-    cardlink: "https://swasthfuture.com/lab-tests/", // Link for this service
+    cardlink: "/coming-soon", // Link for this service
     id: 3,
   },
   {
@@ -55,7 +57,7 @@ const servicesData = [
     description:
       "Find and book appointments with verified doctors and specialists across hospitals and clinics. Choose your preferred slot, avoid long queues, and get timely consultations.",
     buttonText: "Find a Doctor",
-    cardlink: "https://hospital.swasthfuture.com/appointment", // Link for this service
+    cardlink: "/coming-soon", // Link for this service
     id: 4,
   },
   {
@@ -64,7 +66,7 @@ const servicesData = [
     description:
       "Order genuine medicines from trusted pharmacies with fast doorstep delivery. Get expert prescription guidance and hassle-free refills for continuous health support.",
     buttonText: "Order Medicines",
-    cardlink: "https://swasthfuture.com/shop/", // Link for this service
+    cardlink: "/coming-soon", // Link for this service
     id: 5,
   },
   {
@@ -73,7 +75,7 @@ const servicesData = [
     description:
       "Get immediate ambulance services and emergency medical care anytime. Our rapid-response network ensures timely treatment, prioritizing your safety and well-being.",
     buttonText: "Get Emergency Help",
-    cardlink: "https://swasthfuture.com/listing-category/ambulance/", // Link for this service
+    cardlink: "/coming-soon", // Link for this service
     id: 6,
   },
 ];
@@ -115,15 +117,27 @@ const Timeline = () => {
       style={{ padding: "10px", marginTop: "80px" }}
       className="service-container py-10"
     >
-      <h2
+      <div
         style={{
-          fontSize: "1.2rem",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
           textAlign: "center",
-          marginBottom: "2rem",
         }}
+        className="main-text"
       >
-        ( Our Service )
-      </h2>
+        <PopupCard>
+          <img
+            style={{
+              maxWidth: "140px",
+              margin: "2rem 0",
+            }}
+            src={OurServiceSvg}
+            alt=""
+          />
+        </PopupCard>
+      </div>
       <div
         style={{ margin: "0 auto", marginBottom: "2rem" }}
         className="services-main"
@@ -246,15 +260,28 @@ const HorizontalScrollTimeline = () => {
 
   return (
     <div className="service-container">
-      <h2
+      <div
         style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
           textAlign: "center",
-          fontSize: "1.2rem",
-          marginBottom: "-5rem",
         }}
+        className="main-text"
       >
-        ( Our Services )
-      </h2>
+        <PopupCard>
+          <img
+            style={{
+              maxWidth: "140px",
+              marginBottom: "-6rem",
+              marginTop: "2rem",
+            }}
+            src={QuickAccessSvg}
+            alt=""
+          />
+        </PopupCard>
+      </div>
       <section ref={targetRef} className="service-container relative h-[400vh]">
         <div className="service-container-section sticky top-0 flex h-screen items-center overflow-hidden">
           <motion.div
@@ -365,9 +392,20 @@ const Services = () => {
   return (
     <div>
       <div className="timeline">
-        <h2 className="timeline-title text-xl font-semibold text-center my-6">
-          ( Our Journey )
-        </h2>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+          className="main-text"
+        >
+          <PopupCard>
+            <img style={{ maxWidth: "140px" }} src={OurServiceSvg} alt="" />
+          </PopupCard>
+        </div>
         <Timeline />
       </div>
 
@@ -376,7 +414,7 @@ const Services = () => {
           display: "flex",
           justifyContent: "center",
           marginBottom: "2rem",
-          marginTop : '-4rem'
+          marginTop: "-4rem",
         }}
         className="tab-img"
       >

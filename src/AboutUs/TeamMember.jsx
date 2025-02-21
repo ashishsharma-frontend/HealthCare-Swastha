@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 import PopupCard from "../FramerMMotion/PopupCard";
 import Reveal from "../FramerMMotion/Reveal";
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import MeetTeam from "../MainResources/ExtraResources/OurTeam.svg";
+import ButtonImg from "../MainResources/AboutResources/TeamButton.svg";
 import HarshImg from "../MainResources/AboutResources/Harsh.jpg";
 import RamkeshImg from "../MainResources/AboutResources/Ramkesh.jpg";
 import AshishImg from "../MainResources/AboutResources/AshishSharma.svg";
@@ -11,36 +13,45 @@ const teamMembers = [
     name: "Harsh Sharma",
     role: "CEO",
     image: HarshImg,
-    linkedin: "https://linkedin.com/in/harshsharma",
-    twitter: "https://twitter.com/harshsharma",
-    github: "https://github.com/harshsharma",
+    teamlink: "/harsh",
   },
   {
     name: "Ashish Sharma",
     role: "Web Developer",
     image: AshishImg,
-    linkedin: "https://linkedin.com/in/ashishsharma",
-    twitter: "https://twitter.com/ashishsharma",
-    github: "https://github.com/ashishsharma",
+    teamlink: "/ashish",
   },
   {
     name: "Ramkesh Vyas",
     role: "Investor",
     image: RamkeshImg,
-    linkedin: "https://linkedin.com/in/ramkeshvyas",
-    twitter: "https://twitter.com/ramkeshvyas",
-    github: "https://github.com/ramkeshvyas",
+    teamlink: "/ramkesh",
   },
 ];
 
 function TeamMember() {
   return (
     <div>
-           {/* Our Team Section */}
-           <div className="our-team-section">
-        <h2 style={{ fontSize: "1.2rem", textAlign: "center", margin: "2rem" }}>
-          ( Meet Our Team )
-        </h2>
+      {/* Our Team Section */}
+      <div className="our-team-section">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+          className="main-text"
+        >
+          <PopupCard>
+            <img
+              style={{ maxWidth: "140px", margin: "2rem 0" }}
+              src={MeetTeam}
+              alt=""
+            />
+          </PopupCard>
+        </div>
         <div
           style={{
             display: "flex",
@@ -90,61 +101,37 @@ function TeamMember() {
                 </div>
               </PopupCard>
 
-              <h2 style={{ marginBottom: "-1.2rem", fontSize: "1rem" }}>
+              <h2 style={{ fontSize: "1rem" }}>
                 {member.name} - {member.role}
               </h2>
 
-              {/* Social Icons */}
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  gap: "15px",
-                  paddingTop: "1rem",
-                }}
-                className="team-social"
-              >
-                <Reveal>
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaLinkedin
-                      style={{ fontSize: "1.1rem", color: "#0077b5" }}
-                    />
-                  </a>
-                </Reveal>
-                <Reveal>
-                  <a
-                    href={member.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaTwitter
-                      style={{ fontSize: "1.1rem", color: "#1DA1F2" }}
-                    />
-                  </a>
-                </Reveal>
-                <Reveal>
-                  <a
-                    href={member.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub
-                      style={{ fontSize: "1.1rem", color: "#171515" }}
-                    />
-                  </a>
-                </Reveal>
-              </div>
+              <Link to={member.teamlink}>
+                <div
+                  style={{
+                    width: "100%",
+                    margin: "0 auto",
+                    display: "flex",
+                    justifyContent: "center",
+                    borderTop: "1px solid #3b3d40",
+                    marginTop: "1rem",
+                    paddingTop: "0.5rem",
+                  }}
+                  className="team-button"
+                >
+                  <img
+                    style={{ width: "120px", cursor: "pointer" }}
+                    src={ButtonImg}
+                    alt=""
+                  />
+                </div>
+              </Link>
             </div>
           ))}
         </div>
         ;
       </div>
     </div>
-  )
+  );
 }
 
-export default TeamMember
+export default TeamMember;

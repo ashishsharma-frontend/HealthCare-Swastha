@@ -1,18 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const footerData = [
     {
       title: "Company",
-      links: ["About Us", "Contact Us", "Careers"],
+      links: [
+        { name: "About Us", path: "/" },
+        { name: "Contact Us", path: "/" },
+        { name: "Careers", path: "/" },
+      ],
     },
     {
       title: "Services",
-      links: ["Emergency", "Appointment", "Ambulance"],
+      links: [
+        { name: "Emergency", path: "/" },
+        { name: "Appointment", path: "/" },
+        { name: "Ambulance", path: "/" },
+      ],
     },
     {
       title: "Legal",
-      links: ["Privacy Policy", "Terms"],
+      links: [
+        { name: "Privacy Policy", path: "/privacy-policy" },
+        { name: "Terms", path: "/term-condition" },
+      ],
     },
   ];
 
@@ -62,10 +74,13 @@ function Footer() {
               </h4>
               <ul>
                 {section.links.map((link, idx) => (
-                  <li style={{ marginBottom: "0.50rem" }} key={idx}>
-                    <a style={{ color: "#FBFBFB", fontSize: "1rem" }} href="#">
-                      {link}
-                    </a>
+                  <li key={idx} style={{ marginBottom: "0.50rem" }}>
+                    <Link
+                      style={{ color: "#FBFBFB", fontSize: "1rem" }}
+                      to={link.path}
+                    >
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

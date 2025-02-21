@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Della+Respira&family=Syne:wght@400..800&display=swap');
 
 :root {
   --Text-Font: "Syne", sans-serif;
   --Heading-Font: "Bebas Neue", sans-serif;
   --Signature-Font: "Signature";
+  --Team-Text: "Della Respira", serif;
 }
 
 @font-face {
@@ -46,6 +47,11 @@ body {
   background-color: #f9f9f9;
 }
 
+.navbar{
+  background: url(./MainResources//AboutResources/nnnoise3.svg);
+  object-fit: cover;
+}
+
 .Download-app-Section,
 .team-social {
   border-top: 1px solid black;
@@ -58,8 +64,8 @@ body {
   transform: rotate(2deg);
 }
 
-.team-card-img img:hover,
 .why-choose-video video:hover,
+.team-button img:hover,
 .web-image img:hover {
   transform: scale(1.1);
 }
@@ -207,6 +213,3 @@ body {
     max-width:  100%;
   }
 }
-
-
-

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
-import DownloadImg from "../MainResources/ExtraResources/download.svg";
+import DownloadImg from "../MainResources/ExtraResources/Logo.svg";
 import { SiCoinmarketcap } from "react-icons/si";
 import MenuVideo from "../MainResources/ExtraResources/MenuVideo.mp4";
 
@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <header
       style={{
-        padding: "1.5rem 2rem",
+        padding: "1rem 2rem",
         width: "100%",
         display: "flex",
         justifyContent: "space-between",
@@ -63,7 +63,7 @@ const Navbar = () => {
     >
       <div className="logo">
         <Link to="/">
-          <img src={DownloadImg} alt="logo" style={{ width: "80px" }} />
+          <img src={DownloadImg} alt="logo" style={{ width: "60px" }} />
         </Link>
       </div>
 
@@ -124,7 +124,7 @@ const Navbar = () => {
                 { name: "Home", path: "/" },
                 { name: "AboutUs", path: "/about" },
                 { name: "Our Services", path: "/our-services" },
-                { name: "HomeCare", path: "/" },
+                // { name: "HomeCare", path: "/" },
                 { name: "Contact", path: "/contact" },
               ].map((item, index) => (
                 <motion.li

@@ -3,6 +3,7 @@ import Reveal from "../FramerMMotion/Reveal";
 import PopupCard from "../FramerMMotion/PopupCard";
 import Button from "../FramerMMotion/Button";
 import { MdArrowOutward } from "react-icons/md";
+import HmsDownload from "../MainResources/ExtraResources/HmsDownload.svg";
 import DownloadHmsImg from "../MainResources/HomeResources/DownloadHms.svg";
 import DownloadAppImg from "../MainResources/HomeResources/DownloadApp.svg";
 import { Link } from "react-router-dom";
@@ -11,12 +12,27 @@ function DownloadApp() {
   return (
     <section className="Download-app-Section">
       <div
-        style={{ textAlign: "center", margin: " 2rem 0" }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
         className="main-text"
       >
-        <h2 style={{ fontSize: "1.2rem" }}>( HMS )</h2>
-        <p style={{ fontSize: "1rem" }}>Health Management System</p>
+        <PopupCard>
+          <img
+            style={{ maxWidth: "150px", margin: "2rem 0" }}
+            src={HmsDownload}
+            alt=""
+          />
+        </PopupCard>
+        <Reveal>
+          <p style={{ fontSize: "1rem" }}>Health Management System</p>
+        </Reveal>{" "}
       </div>
+
       <div
         style={{
           width: "100%",

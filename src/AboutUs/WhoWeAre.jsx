@@ -4,6 +4,7 @@ import PopupCard from "../FramerMMotion/PopupCard";
 import Reveal from "../FramerMMotion/Reveal";
 import TeamMember from "../AboutUs/TeamMember";
 import WhyChooseUs from "../AboutUs/WhyChooseUs";
+import AboutMeSvg from "../MainResources/ExtraResources/AboutMe.svg";
 import AboutVideo from "../MainResources/AboutResources/AboutVideo.mp4";
 import emailjs from "emailjs-com"; // Import EmailJS
 
@@ -49,17 +50,24 @@ const About = () => {
       style={{ marginTop: "87px", backgroundColor: "#F9F9F9" }}
       className="who-we-are"
     >
-      <h2
+      <div
         style={{
-          fontSize: "1.2rem",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
           textAlign: "center",
-          padding: "2rem",
-          marginBottom: "-1.5rem",
         }}
+        className="main-text"
       >
-        ( About Me )
-      </h2>
-
+        <PopupCard>
+          <img
+            style={{ maxWidth: "110px", marginTop: "3rem", marginBottom : '2rem' }}
+            src={AboutMeSvg}
+            alt=""
+          />
+        </PopupCard>
+      </div>
       <div
         style={{ margin: "0 auto", padding: "1rem" }}
         className="about-section"
@@ -165,81 +173,81 @@ const About = () => {
             }}
             className="about-right"
           >
-      <PopupCard>
-      <div className="form-text">
-              <h2
-                style={{
-                  fontFamily: "var(--Heading-Font)",
-                  fontSize: "1.5rem",
-                  color: "#8B93FE",
-                  marginTop: "0.5rem",
-                }}
-              >
-                Your Feedback Matters!
-              </h2>
-              <p>Anything that can be improved?</p>
-              {!submitted ? (
-                <form
-                  onSubmit={handleSubmit}
+            <PopupCard>
+              <div className="form-text">
+                <h2
                   style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "2rem",
-                    marginTop: "2rem",
+                    fontFamily: "var(--Heading-Font)",
+                    fontSize: "1.5rem",
+                    color: "#8B93FE",
+                    marginTop: "0.5rem",
                   }}
                 >
-                  <input
-                    type="text"
-                    placeholder="Your Name"
+                  Your Feedback Matters!
+                </h2>
+                <p>Anything that can be improved?</p>
+                {!submitted ? (
+                  <form
+                    onSubmit={handleSubmit}
                     style={{
-                      width: "100%",
-                      border: "1px solid #4b4d40",
-                      padding: "10px",
-                      borderRadius: "5px",
-                    }}
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                  <textarea
-                    style={{
-                      width: "100%",
-                      border: "1px solid #4b4d40",
-                      padding: "10px",
-                      borderRadius: "5px",
-                      marginBottom: "-1rem",
-                    }}
-                    placeholder="Your feedback (Optional)"
-                    rows="4"
-                    value={feedback}
-                    onChange={(e) => setFeedback(e.target.value)}
-                  ></textarea>
-                  <button
-                    type="submit"
-                    style={{
-                      backgroundColor: "#8B93FE",
-                      color: "#FBFBFB",
-                      padding: "10px 20px",
-                      borderRadius: "5px",
-                      cursor: "pointer",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "2rem",
+                      marginTop: "2rem",
                     }}
                   >
-                    Submit Feedback
-                  </button>
-                </form>
-              ) : (
-                <p
-                  style={{
-                    textAlign: "center",
-                    marginTop: "4rem",
-                    border: "1px solid #4B4D40",
-                    padding: "10px",
-                  }}
-                >
-                  ✅ Thank you for your feedback, {name}!
-                </p>
-              )}
-            </div>
-      </PopupCard>
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      style={{
+                        width: "100%",
+                        border: "1px solid #4b4d40",
+                        padding: "10px",
+                        borderRadius: "5px",
+                      }}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                    <textarea
+                      style={{
+                        width: "100%",
+                        border: "1px solid #4b4d40",
+                        padding: "10px",
+                        borderRadius: "5px",
+                        marginBottom: "-1rem",
+                      }}
+                      placeholder="Your feedback (Optional)"
+                      rows="4"
+                      value={feedback}
+                      onChange={(e) => setFeedback(e.target.value)}
+                    ></textarea>
+                    <button
+                      type="submit"
+                      style={{
+                        backgroundColor: "#8B93FE",
+                        color: "#FBFBFB",
+                        padding: "10px 20px",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                      }}
+                    >
+                      Submit Feedback
+                    </button>
+                  </form>
+                ) : (
+                  <p
+                    style={{
+                      textAlign: "center",
+                      marginTop: "4rem",
+                      border: "1px solid #4B4D40",
+                      padding: "10px",
+                    }}
+                  >
+                    ✅ Thank you for your feedback, {name}!
+                  </p>
+                )}
+              </div>
+            </PopupCard>
           </div>
         </div>
       </div>

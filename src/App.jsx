@@ -9,6 +9,11 @@ import OurServices from "./OurServices/OurServices";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ComingSoon from "./ComingSoon";
+import PrivacyPolicy from "./Policy";
+import Term from "./Term";
+import Harsh from "./AboutUs/Harsh";
+import Ramkesh from "./AboutUs/Ramkesh";
+import Ashish from "./AboutUs/Ashish";
 
 function App() {
   const location = useLocation();
@@ -23,6 +28,11 @@ function App() {
           <Route path="/about" element={<WhoWeAre />} />
           <Route path="/our-services" element={<OurServices />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/term-condition" element={<Term />} />
+          <Route path="/harsh" element={<Harsh />} />
+          <Route path="/ramkesh" element={<Ramkesh />} />
+          <Route path="/ashish" element={<Ashish />} />
         </Routes>
       </AnimatePresence>
       <Footer />
