@@ -40,8 +40,9 @@ function Ashish() {
           </Reveal>
           <Reveal>
             <h3 style={{ fontWeight: "600", fontSize: "1.2rem" }}>
-              Founder & CEO
-            </h3>
+            Frontend Developer | Creative Web Enthusiast
+
+</h3>
           </Reveal>
           <Reveal>
             <p>

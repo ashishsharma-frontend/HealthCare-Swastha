@@ -49,7 +49,7 @@ function DownloadApp() {
           <PopupCard>
             <img
               style={{
-                maxWidth: "160px",
+                maxWidth: "100px",
                 marginBottom: "2.5rem",
               }}
               src={DownloadAppImg}

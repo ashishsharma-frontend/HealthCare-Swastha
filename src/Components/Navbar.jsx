@@ -5,7 +5,9 @@ import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import DownloadImg from "../MainResources/ExtraResources/Logo.svg";
 import { SiCoinmarketcap } from "react-icons/si";
-import MenuVideo from "../MainResources/ExtraResources/MenuVideo.mp4";
+import NavbarImg from "../MainResources/ExtraResources/Navbar.svg";
+import PopupCard from "../FramerMMotion/PopupCard";
+import Reveal from "../FramerMMotion/Reveal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,7 +79,11 @@ const Navbar = () => {
         >
           <SiCoinmarketcap />
         </span>
-        <div style={{cursor : 'pointer'}} className="menu-icon" onClick={toggleMenu}>
+        <div
+          style={{ cursor: "pointer" }}
+          className="menu-icon"
+          onClick={toggleMenu}
+        >
           {isOpen ? <RxCross2 size={30} /> : <IoIosMenu size={30} />}
         </div>
       </div>
@@ -94,7 +100,7 @@ const Navbar = () => {
               position: "absolute",
               top: "85px",
               right: "0",
-              maxWidth: "360px",
+              maxWidth: "430px",
               width: "100%",
               textAlign: "end",
               minHeight: "89vh",
@@ -110,8 +116,7 @@ const Navbar = () => {
               style={{
                 listStyle: "none",
                 padding: "0",
-                fontSize: "clamp(1.6rem, 3vw, 1.9rem)",
-                fontFamily: "var(--Heading-Font)",
+                fontSize: "clamp(2.1rem, 3vw, 2.5rem)",
                 color: "#FBFBFB",
                 textDecoration: "none",
                 fontWeight: "700",
@@ -145,30 +150,45 @@ const Navbar = () => {
               ))}
             </ul>
 
-            <div className="menu-bottom">
-              {/* Video Animation (Delays slightly after nav links) */}
-              <motion.div
-                className="menu-video"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  transition: { delay: 1.2, duration: 0.6 },
+            <div
+              style={{
+                borderTop: "2px solid #f9f9f9",
+                textAlign: "start",
+                padding: "0.5rem",
+              }}
+              className="menu-bottom"
+            >
+              <div
+                style={{
+                  color: "#f9f9f9",
+                  marginBottom: "1.5rem",
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "1.2rem",
                 }}
+                className="social-icon"
               >
-                <video
-                  src={MenuVideo}
-                  autoPlay
-                  loop
-                  muted
-                  style={{
-                    width: "100%",
-                    marginTop: "2rem",
-                    borderRadius: "10px",
-                    border : '2px solid #fbfbfb'
-                  }}
-                ></video>
-              </motion.div>
+                <Link to="https://www.linkedin.com/company/swastha-sky-private-limited/?originalSubdomain=in">
+                  <Reveal>
+                    <span style={{ fontSize: "1.2rem" }}>Linkedin</span>
+                  </Reveal>{" "}
+                </Link>{" "}
+                <Link to="">
+                  <Reveal>
+                    <span style={{ fontSize: "1.2rem" }}>Twitter</span>
+                  </Reveal>{" "}
+                </Link>
+                <Link to="https://www.instagram.com/swasthasky/">
+                  <Reveal>
+                    <span style={{ fontSize: "1.2rem" }}>Instagram</span>
+                  </Reveal>{" "}
+                </Link>{" "}
+              </div>
+              <div style={{ marginTop: "2rem" }} className="circle-line">
+                <PopupCard>
+                  <img style={{ margin: "0 auto" }} src={NavbarImg} alt="" />
+                </PopupCard>{" "}
+              </div>
             </div>
           </motion.div>
         )}

@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import HomePage from "./HomePage/HomePage";
 import WhoWeAre from "./AboutUs/WhoWeAre";
 import OurServices from "./OurServices/OurServices";
+import Contact from "./Components/Contact";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ComingSoon from "./ComingSoon";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/term-condition" element={<Term />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/harsh" element={<Harsh />} />
           <Route path="/ramkesh" element={<Ramkesh />} />
           <Route path="/ashish" element={<Ashish />} />

@@ -213,3 +213,38 @@ body {
     max-width:  100%;
   }
 }
+
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  font-family: var(--Heading-Font);
+  transition: font-family 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background: #B2FF9B;
+  top: 50%;
+  left: auto;
+  right: 0;
+  transform: translateY(-50%);
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;  /* Expands from right to left and stays */
+  left: 0;
+  right: auto;
+}
+
+.nav-link:hover ul {
+  font-family: var(--Signature-Font);
+}
+
+
+.nav-link:hover {
+ font-family: var(--Signature-Font);
+}

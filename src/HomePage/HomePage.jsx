@@ -4,9 +4,7 @@ import Button from "../FramerMMotion/Button";
 import Reveal from "../FramerMMotion/Reveal";
 import TextImg from "../MainResources/HomeResources/TextImg.jpg";
 import SecondOneMp4 from "../MainResources/HomeResources/SecondOne.mp4";
-import VideoConsultSvg from "../MainResources/ExtraResources/VideoConsult.svg";
 import { MdArrowOutward } from "react-icons/md";
-import VideoConsultMain from "../MainResources/HomeResources/VideoConsult.svg";
 import Marquee from "react-fast-marquee";
 import PopupCard from "../FramerMMotion/PopupCard";
 import HomeCare from "./HomeCare";
@@ -74,7 +72,7 @@ function HomePage() {
           marginBottom: "-0.5rem",
         }}
       >
-        <div className="home-left-side">
+        <div style={{marginTop : '1.5rem'}} className="home-left-side">
           <div className="top-text">
             <Reveal>
               <h2
@@ -296,92 +294,7 @@ function HomePage() {
         </Marquee>
       </div>
 
-      {/* <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          gap: "1.4rem",
-        }}
-        className="video-consult"
-      >
-        <div className="main-text">
-          <PopupCard>
-            <img
-              style={{
-                maxWidth: "180px",
-                marginBottom: "1rem",
-                padding: "1rem",
-              }}
-              src={VideoConsultSvg}
-              alt=""
-            />
-          </PopupCard>
-        </div>{" "}
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            flexWrap: "wrap",
-            textAlign: "start",
-            gap: "3rem",
-          }}
-          className="consult-middle"
-        >
-          <p style={{ maxWidth: "600px", padding: "1rem" }}>
-            Get high-quality medical advice from the comfort of your home with
-            our Video Consultation Services. Connect with experienced doctors
-            and healthcare professionals for expert guidance, diagnosis, and
-            treatment plans—without the need for a physical visit.
-          </p>
-
-          <Link
-            style={{
-              padding: "2rem 0",
-              display: "flex",
-              backgroundColor: "#8B93FE",
-              padding: "1rem",
-              borderRadius: "12px",
-            }}
-            to={""}
-          >
-            {" "}
-            <Button
-              title="Video Consultant"
-              rightIcon={
-                <MdArrowOutward
-                  style={{
-                    backgroundColor: "#B4FEA2",
-                    padding: "5px",
-                    borderRadius: "50%",
-                    fontSize: "1.5rem",
-                    marginLeft: "1rem",
-                  }}
-                />
-              }
-              containerClass=" flex justify-center items-center  w-[100%] cursor-pointer "
-            />
-          </Link>
-        </div>
-        <div
-          style={{
-            maxWidth: "500px",
-            overflow: "hidden",
-            marginBottom: "-2rem",
-          }}
-          className="consult-img"
-        >
-          <img
-            style={{ width: "100%", marginTop: "-2rem", objectFit: "cover" }}
-            src={VideoConsultMain}
-            alt=""
-          />
-        </div>
-      </div> */}
+   
 
       <div className="HomeCare">
         <HomeCare />
